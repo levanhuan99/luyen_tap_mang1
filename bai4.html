@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="text"/>
+<button id="add" value="button" onclick="add()">add</button>
+<button id="display" value="display" onclick="display()">display</button>
+<button id="daoNguoc" value="nguoc" onclick="daoNguoc()">dao Nguoc</button>
+<div id="div"></div><br/>
+<div id="result"></div><br/>
+<div id="nguoc"></div>
+<script>
+
+
+
+   let array=new Array ();
+   let x=0;
+   function add() {
+       array[x]=document.getElementById('text').value;
+       x++;
+       document.getElementById("div").innerHTML="da duoc them vao mang";
+       document.getElementById('text').value=" ";
+
+
+   }
+   function display() {
+       let j=" ";
+        for (let i=0;i<array.length;i++){
+
+            j+=array[i] +",";
+        }
+        document.getElementById("result").innerHTML="day la mang ban vua nhap"+" "+j;
+        console.log( j);
+    }
+    function daoNguoc() {
+       let x=array;
+       let first=0;
+       let last=x.length-1;
+       while(first<last){
+           let i=x[first];
+           x[first]=x[last];
+           x[last]=i;
+           first++;
+           last--;
+       }
+       document.getElementById("nguoc").innerHTML="day la mang dao nguoc"+" "+x;
+       console.log(x);
+
+    }
+
+
+</script>
+</body>
+</html>

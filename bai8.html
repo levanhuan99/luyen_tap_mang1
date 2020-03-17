@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let x=[6,2,1,4,7,9,78,32,45,56];
+    for (let i=0; i<x.length-1; i++){
+
+        for (let j=x.length-1; j>i; j--){
+
+            if(x[j]>x[j-1]){
+                let swap=x[j];
+                x[j]=x[j-1];
+                x[j-1]=swap;
+            }
+        }
+    }
+    document.write(x);
+</script>
+</body>
+</html>
